@@ -1,0 +1,18 @@
+[package]
+name = "rocket-time"
+version = "0.1.0"
+authors = ["Josh Lee <jleedev@gmail.com>"]
+
+[profile.release]
+lto = true
+
+[dependencies]
+rocket = "0.4.0"
+serde = "1.0.82"
+serde_json = "1.0.33"
+serde_derive = "1.0.82"
+
+[dependencies.rocket_contrib]
+version = "0.4.0"
+default-features = false
+features = ["json", "msgpack"]
