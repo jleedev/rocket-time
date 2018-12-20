@@ -1,6 +1,4 @@
-use rocket::fairing::*;
-use rocket::http::hyper::header::*;
-use rocket::{Request, Response};
+use rocket::{fairing::*, http::hyper::header::*, Request, Response};
 
 /// Unconditionally allow origin * on all responses
 pub struct Cors;

@@ -1,7 +1,8 @@
-use rocket::response::{content, Responder, Result};
-use rocket::Request;
-use rocket_contrib::json::Json;
-use rocket_contrib::msgpack::MsgPack;
+use rocket::{
+    response::{content, Responder, Result},
+    Request,
+};
+use rocket_contrib::{json::Json, msgpack::MsgPack};
 use serde::Serialize;
 
 /// Produce multiple formats from a single route.

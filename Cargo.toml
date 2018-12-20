@@ -2,6 +2,7 @@
 name = "rocket-time"
 version = "0.1.0"
 authors = ["Josh Lee <jleedev@gmail.com>"]
+edition = "2018"
 
 [profile.release]
 lto = true

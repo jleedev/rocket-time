@@ -1,19 +1,13 @@
 #![feature(proc_macro_hygiene, decl_macro)]
-#[macro_use]
-extern crate rocket;
-extern crate rocket_contrib;
-extern crate serde;
-extern crate serde_json;
-#[macro_use]
-extern crate serde_derive;
-
-use std::time::SystemTime;
 
 mod api_response;
 mod cors;
 
-use api_response::ApiResponse;
-use cors::Cors;
+use crate::{api_response::ApiResponse, cors::Cors};
+
+use rocket::{get, routes};
+use serde_derive::Serialize;
+use std::time::SystemTime;
 
 #[derive(Serialize)]
 struct Timestamp {
